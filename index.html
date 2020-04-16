@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script language="javascript">
+	function TestOnblur(){
+	    alert('觸發on-blur');
+	}
+	function TestOnchange(){
+    alert('測試onchange事件監聽');
+	}
+	function ShowToday(){
+	var Today=new Date();
+	alert("今天日期是 " + Today.getFullYear()+ " 年 " + (Today.getMonth()+1) + " 月 " + Today.getDate() + " 日");
+	}
+	function ChangeBgColor(){
+    document.getElementById("TBox").src="https://i.imgur.com/MMfgfyF.jpg";
+	}
+	function ChangeBgColor2(){
+	    document.getElementById("TBox").src="https://i.imgur.com/ZV8O44e.jpg";
+	}
+	</script>
+	</head>
+	<body>
+		on-click
+		<input type="button" onclick="ShowToday()" value="今天星期幾">
+		<br><br><br>
+		onblur
+		<input type="text" onblur="TestOnblur()">
+		<br><br><br>
+		on-change
+		<select onchange="TestOnchange()">
+			<option>普羅</option>
+			<option>菲絲恩</option>
+		</select>
+		<br><br><br>
+		onmouseover、onmouseout
+		<img onmouseover="ChangeBgColor()" onmouseout="ChangeBgColor2()" id="TBox" src="https://i.imgur.com/ZV8O44e.jpg" alt="Flowers in Chania">
+
+	</body>
+</html>
